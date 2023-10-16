@@ -1,0 +1,33 @@
+<app-search-bar (searchEmit)="onSearch($event)" *ngIf="show"></app-search-bar>
+<div class="container-fluid">
+    <div class="row mx-4">
+        <div *ngFor="let show of shows" class="col-xl-2 col-lg-4 col-md-6 col-sm-12 py-3">
+            <div class="card rounded">
+                <div class="">
+                    <img src="{{show.image.medium}}" class="card-img-top" alt="{{show.name}}">
+                </div>
+                <div class="card-body">
+                  <h6 class="card-title">{{show.name}}</h6>
+                  <span class="card-text">{{show.premiered}}</span><br>
+                  <span class="card-text">{{show.genres | join: ', '}}</span>
+                  <button class="btn-show" (click)="goToShowDetails(show)"><i class="bi bi-arrow-right"></i></button>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="row mx-4">
+        <div *ngFor="let search of searchShow" class="col-xl-2 col-lg-4 col-md-6 col-sm-12 py-3">
+            <div class="card rounded">
+                <div class="">
+                    <img src="{{search.show.image.medium}}" class="card-img-top" alt="{{search.show.name}}">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{search.show.name}}</h5>
+                  <span class="card-text">{{search.show.premiered}}</span><br>
+                  <span class="card-text">{{search.show.genres | join: ', '}}</span>
+                  <button class="btn-show" (click)="goToShowDetails(search.show)"><i class="bi bi-arrow-right"></i></button>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

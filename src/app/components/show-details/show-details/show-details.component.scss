@@ -1,0 +1,55 @@
+.details-container {
+    background-size: cover;
+    background-position: top left;
+    background-repeat: no-repeat;
+    height: 80vh;
+    overflow: hidden;
+    color: #fff;
+
+    .mask-background {
+        background-image: linear-gradient(to left, #ff000000, #100d25);
+        height: 100%;
+
+        .container {
+            padding-top: 10rem;
+            margin: 0 5rem;
+            width: 100%;
+
+            h1 {
+                margin-bottom: 0;
+                font-size: 5rem;
+            }
+
+            .details {
+                margin: 2rem 0;
+                font-size: 0.8rem;
+            }
+
+            .btn-show {
+                margin-right: 3rem;
+                padding: 0.8rem 1.5rem;
+                border: none;
+                border-radius: 10px;
+                color: #100d25;
+                font-size: 1.5rem;
+                font-weight: 500;
+                text-transform: uppercase;
+
+                &:hover {
+                    background-color: rgba(78, 68, 119, 0.589);
+                    color: #fff;
+                }
+            }
+
+            h2 {
+                margin: 2rem 0;
+            }
+
+            .sum {
+                width: 85vh;
+            }
+        }
+    }
+
+    
+}

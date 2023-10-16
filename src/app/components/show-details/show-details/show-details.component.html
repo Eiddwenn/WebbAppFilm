@@ -1,0 +1,22 @@
+<div class="details-container" style="background-image: url({{result.image.original}});">
+    <div class="mask-background">
+        <div class="container">
+            <div class="row">
+                <h1>{{result.name}}</h1>
+                <div class="col-6 details">
+                    <span><i class="bi bi-tv"></i> {{result.network.name}} </span>
+                    <span>{{result.runtime}} </span>
+                    <span>• <i class="bi bi-star-fill"></i> {{result.rating.average}}</span>
+                    <br><span>{{result.genres | join: ' • '}}</span>
+                </div>
+                <div>
+                    <button class="btn-show" type="button"><i class="bi bi-caret-right-square-fill"></i> Play</button>
+                    <button class="btn-show" type="button"><i class="bi bi-film"></i> Trailer</button>
+                </div>
+                <h2>Dettagli</h2>
+                <div [innerHTML]="result.summary" class="sum"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
